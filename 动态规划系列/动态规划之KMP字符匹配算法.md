@@ -1,4 +1,4 @@
-# 动态规划之KMP字符匹配算法
+# 动态规划之KMP字符匹配算法  
 
 KMP 算法（Knuth-Morris-Pratt 算法）是一个著名的字符串匹配算法，效率很高，但是确实有点复杂。
 
@@ -40,7 +40,8 @@ int search(String pat, String txt) {
 对于暴力算法，如果出现不匹配字符，同时回退 `txt` 和 `pat` 的指针，嵌套 for 循环，时间复杂度 $O(MN)$，空间复杂度$O(1)$。最主要的问题是，如果字符串中重复的字符比较多，该算法就显得很蠢。
 
 比如 txt = "aaacaaab" pat = "aaab"：
-
+ 
+ 
 ![brutal](../pictures/kmp/1.gif)
 
 很明显，`pat` 中根本没有字符 c，根本没必要回退指针 `i`，暴力解法明显多做了很多不必要的操作。
